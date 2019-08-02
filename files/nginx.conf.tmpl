@@ -29,6 +29,10 @@ http {
       # Do not pass Authorization header to destination
       proxy_set_header Authorization "";
     }
+    location = /healthcheck.html {
+      empty_gif;
+      break;
+    }
   }
 
   server {
